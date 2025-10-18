@@ -17,4 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const squares = document.querySelectorAll('#board div'); // all squares
+    squares.forEach(square => {
+        square.addEventListener('mouseenter', () => {
+            square.classList.add('hover');
+        });
+        square.addEventListener('mouseleave', () => {
+            square.classList.remove('hover');
+        });
+    });
+});
 
